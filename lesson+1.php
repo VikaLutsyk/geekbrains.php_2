@@ -31,6 +31,12 @@
         public function price() {
             echo  "Цена: " . $this->price ."руб.";
         }
+        public function sale() {
+            echo 
+                "Старая цена:  <s>" . $this->price . "</s>руб. 
+                <br>Скидка " . $this->sale . "%  
+                <br>Новая цена: " . ($this->price-($this->price*$this->sale/100)) . "руб. <br>";
+        }
     }
     
     $skirt = new Clothes("Юбка","HOME","S","red","500","10");
