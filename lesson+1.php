@@ -28,6 +28,9 @@
         public function show() {
             echo $this->name . " <b>\"" . $this->brand . "\"</b>" . "размер " . $this->size . "<br>";
         }
+        public function price() {
+            echo  "Цена: " . $this->price ."руб.";
+        }
     }
     
     $skirt = new Clothes("Юбка","HOME","S","red","500","10");
