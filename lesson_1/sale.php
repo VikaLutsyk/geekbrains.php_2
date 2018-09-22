@@ -3,32 +3,23 @@ include_once "Clothes.class.php";
 
 
     class Hollidays_sale extends Clothes {
-        private $sale;
+        private $h_sale;
         
-        public function __construct($name,$brand,$size,$color,$price, $sale) {
+        public function __construct($name,$brand,$size,$color,$price, $h_sale) {
             parent:: __construct($name,$brand,$size,$color,$price);
-            $this->sale = $sale;
-            $this->price();
+            $this->h_sale = $h_sale;
+            $this->sale();
         }
         
-        public function price() {
+        public function sale() {
             echo 
                 "Старая цена:  <s>" . $this->price . "</s>руб. 
-                <br>Скидка " . $this->sale . "%  
-                <br>Новая цена: " . ($this->price-($this->price*$this->sale/100)) . "руб. <br>";
+                <br>Скидка " . $this->h_sale . "%  
+                <br>Новая цена: " . ($this->price-($this->price*$this->h_sale/100)) . "руб. <br>";
         }
     }
-	class Woman_wear extends Clothes {
-		
-    }
-	class Man_wear extends Clothes {
-		
-    }
-	class Childrens_wear extends Clothes {
-		
-    }
 
-    $clothes2 = new Hollidays_sale("Футболка","HOME","M","white","450","5");
+    $clothes2 = new Hollidays_sale("Футболка","HOME","M","white","450","2");
 
 
 
